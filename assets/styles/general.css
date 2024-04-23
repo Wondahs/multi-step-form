@@ -1,0 +1,53 @@
+
+@font-face {
+	font-family: Ubuntu-Bold;
+	src: url(../fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+	font-family: Ubuntu-Medium;
+	src: url(../fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+	font-family: Ubuntu-Regular;
+	src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: hsl(206, 94%, 87%);
+	color: hsl(213, 96%, 18%);
+	font-family: "Ubuntu-Regular", sans-serif;
+	position: relative;
+}
+
+main .bottom .step-2 .bonus {
+	display: none;
+	font-weight: bold;
+	opacity: 1;
+	font-size: .7rem;
+}
+
+.dim-button {
+	opacity: .5;
+}
+
+.dim-button:hover {
+	cursor: not-allowed;
+}
+
+button {
+	text-align: center;
+}
+
+button:hover {
+	cursor: pointer;
+}
+.attribution { 
+	font-size: 11px;
+	text-align: center;
+	margin: 1rem 0; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }

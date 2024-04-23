@@ -1,0 +1,400 @@
+
+
+main {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 100%;
+}
+
+main .top {
+	background-image: url(../images/bg-sidebar-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	display: flex;
+	padding: 30px 10px;
+	justify-content: center;
+	column-gap: 10px;
+	height: 12rem;
+}
+
+main .top .steps {
+	margin-top: 2rem;
+}
+
+main .top .steps .step-text {
+	display: none;
+}
+
+main .top .steps button {
+	width: 3rem;
+	aspect-ratio: 1;
+	background-color: transparent;
+	border: .1rem white solid;
+	border-radius: 50%;
+	color: white;
+}
+
+main .bottom {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	margin-bottom: 25rem;
+}
+
+main .bottom .step-1,
+main .bottom .step-2,
+main .bottom .step-3,
+main .bottom .step-4,
+main .bottom .step-5 {
+	position: absolute;
+	width: 85%;
+	background-color: white;
+	top: 8.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 3% 5%;
+	display: flex;
+	flex-direction: column;
+	border-radius: 1rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+main .bottom * {
+	width: 100%;
+}
+
+.bottom label, button input {
+	width: 100%;
+}
+
+.bottom input {
+	margin-bottom: 1rem;
+}
+
+p span {
+	opacity: .3;
+}
+
+h3 {
+	margin: .5rem 0 0 0;
+	font-family: Ubuntu-Bold;
+	font-size: 2rem;
+}
+
+.step-1 label {
+	font-family: Ubuntu-Bold;
+}
+
+.step-1 input {
+	padding: 1rem;
+	width: 85%;
+	border: 1px gray solid;
+	border-radius: .3rem;
+}
+
+.step-1 input::placeholder {
+	font-size: 1rem;
+	color: hsl(213, 96%, 18%);
+	opacity: .3;
+	font-family: Ubuntu-Bold;
+}
+
+main .bottom .progress {
+	position: fixed;
+	display: none;
+	padding: 1rem .1rem;
+	bottom: 0;
+	background-color: white;
+	width: 100%;
+}
+
+.progress .next {
+	margin-right: auto;
+	margin-left: 1em;
+	width: 25%;
+}
+
+.progress .back {
+	margin-left: auto;
+	margin-right: 1em;
+	width: 25%;
+}
+
+main .bottom .progress button {
+	width: 100%;
+	border: none;
+	background-color: hsl(213, 96%, 18%);
+	color: white;
+	border-radius: .5rem;
+	padding: .5rem 1rem;
+	font-family: Ubuntu-Bold;
+}
+
+
+input[type="radio"] {
+	display: none;
+}
+
+.card {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgb(206, 203, 203);
+	border-radius: .5rem;
+	margin: .5rem 0rem;
+}
+
+.step-3 .card {
+	flex-direction: row;
+	padding: 1rem 0;
+	column-gap: 1rem;
+	padding-left: 0;
+	width: 100%;
+}
+
+.step-3 .card input {
+	width: 2rem;
+	margin: auto 0;
+	margin-left: 1rem;
+}
+
+.card .cost {
+	width: min-content;
+	margin-right: 1rem;
+}
+
+.step-3 .card:last-child {
+	margin-bottom: 3rem;
+}
+
+.cost {
+	color: blue;
+}
+
+.card:hover {
+	cursor: pointer;
+}
+
+.card .card-details {
+	display: flex;
+	padding: 1.5rem 0;
+	width: 100%;
+	border: 1px solid rgb(206, 203, 203);
+	border-radius: .5rem;
+}
+
+.card .card-details img {
+	width: 3rem;
+	margin: 0 1rem;
+}
+
+.card-text * {
+	margin: .2rem 0;
+	padding: 0;
+}
+
+.card-text h3 {
+	font-size: 1.2rem;
+}
+
+input[type="radio"]:checked + .card-details
+{
+	border: 1px solid blue;
+	background-color: rgb(208, 239, 239);
+}
+
+.billing-toggle {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 1.5rem auto;
+	width: 100%;
+	background-color: #f3eded;
+	padding: 1rem 0;
+	border-radius: .5rem;
+}
+
+.billing-toggle .monthly {
+	margin-left: 3rem;
+}
+/* Hide the default checkbox */
+.switch input {
+  display: none;
+}
+
+/* Style the switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 34px;
+}
+
+/* Style the slider */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.switch .slider {
+	width: 74px;
+}
+/* Style the slider button */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+/* Move the slider button to the right when the checkbox is checked */
+.switch input:checked + .slider:before {
+  transform: translateX(40px);
+}
+
+.step-4 .finishing {
+	background-color: hsl(206, 94%, 87%);
+	border-radius: 1rem;
+	padding: 1rem 1rem;
+	width: 90%;
+}
+
+.step-4 .finishing .title {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px rgb(187, 185, 185) solid;
+	/* margin-bottom: 1rem; */
+}
+
+p {
+	opacity: 1;
+}
+
+.plan {
+	padding: 0;
+	padding-bottom: 1rem;
+	margin: 0;
+}
+.finishing p {
+	display: flex;
+	width: 100%;
+	color: hsl(240, 2%, 53%);
+	margin: 1rem 0;
+}
+
+
+p.finishing-cost {
+	margin-right: auto;
+	width: min-content;
+	font-weight: bold;
+	color: hsl(213, 96%, 18%);
+}
+
+.finishing p span {
+	width: min-content;
+	margin: auto 0;
+	margin-left: auto;
+	color: hsl(213, 96%, 18%);
+	opacity: 1;
+}
+
+.plan a, .plan p {
+	padding: 0;
+	margin: 0;
+}
+.title h3 {
+	font-size: 1.5rem;
+	margin: 0;
+	padding: 0;
+}
+
+
+main .bottom .total {
+	display: flex;
+	align-items: center;
+	color: hsl(240, 2%, 53%);
+	padding: 0 1rem;
+	width: 90%;
+}
+
+.total span {
+	width: min-content;
+	margin-left: auto;
+	color: blue;
+	font-weight: bold;
+	opacity: 1;
+}
+
+main .bottom .step-5 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 5rem 1rem;
+}
+
+.step-5 * {
+	max-width: fit-content;
+}
+
+.step-5 p {
+	opacity: .4;
+}
+
+.step-5 img {
+	width: 3rem;
+	margin: 1rem auto;
+}
+
+
+main .bottom .step-2,
+main .bottom .step-3,
+main .bottom .step-4,
+main .bottom .step-5 {
+	display: none;
+}
+
+footer {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	padding: 1.5rem 0;
+}
+
+footer .back {
+	margin-left: 2rem;
+	margin-right: auto;
+	width: 25%;
+}
+
+footer .next {
+	margin-right: 2rem;
+	margin-left: auto;
+	width: 25%;
+}
+
+footer button {
+	width: 100%;
+	border: none;
+	background-color: hsl(213, 96%, 18%);
+	color: white;
+	border-radius: .5rem;
+	padding: .5rem 1rem;
+	font-family: Ubuntu-Bold;
+}
